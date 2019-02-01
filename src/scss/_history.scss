@@ -8,7 +8,7 @@
         position: relative;
         margin: 10px auto;
         .js-slider{
-            width: 506px;
+            width: 100%;
             height: 407px;
             position: relative;
             overflow: hidden;
@@ -85,31 +85,7 @@
     }
 
 }
-@media screen and (max-width: $small){
-    .history{
-        margin-top: 0px;
-        padding-top: 50px;
-        img{
-            text-align: center;
-        }
-        h2{
-            margin-top: 30px;
-            &::before{
-                left: 0px;  
-            }
 
-        }
-        p{
-            margin-left: 15px;
-            margin-right: 15px;
-        }
-        .js-slider__wrap{
-            
-            height: auto;
-            border: none;
-        }
-    }
-}
 @media screen and (max-width: $container-width-medium){
     .history{
         margin-top: 0px;
@@ -136,5 +112,41 @@
     }
 
 
+}
+@media screen and (max-width: $small){
+    .history{
+        margin-top: 0px;
+        padding-top: 50px;
+
+
+        .js-slider__wrap{
+            width: 100%;
+           
+            .js-slider{
+                width: 100%;
+                height: 330px;
+            }
+            .js-btn{
+                
+                .js-btn-left, .js-btn-right, .js-btn-play {
+                    width:60px;
+                    height:60px;
+                }
+            }
+        }
+        img{
+            text-align: center;
+        }
+        h2{
+            margin-top: 10px;
+          
+
+        }
+        p{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        
+    }
 }
   

@@ -67,15 +67,23 @@
             min-height: 241px;
             margin-top: 32px;
             padding: 0px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__blank{
+            margin-right: 18px;
+            margin-left: 18px;
+            margin-bottom: 102px;
         }
         &__icon {
             width: 80px;
             height: 80px;
         }
         &__text {
-            
-            top: 26%;
-            left: -7%;
+            top: 60%;
+            left: -15%;
             width: 100px;
             h3{
                 font-size: 20px; 

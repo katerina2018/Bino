@@ -1,7 +1,7 @@
 .works{
     text-align: center;
     min-height: 763px;
-    margin-top: 124px;
+    padding-top: 124px;
     font-family: $font-OpenSans;
     .hidden{
         display: none;
@@ -135,7 +135,8 @@
 }
 @media screen and (max-width: $small){
     .works{
-        margin-top: 62px;
+        margin-top: 0px;
+        padding-top: 70px;
         &__menu{
             margin-top: 0px;
         }

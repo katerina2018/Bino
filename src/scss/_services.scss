@@ -88,6 +88,10 @@
 @media screen and (max-width: $small){
     .services{
         background: #202020;
+        margin-top: 60px;
+        h2{
+            margin-top: 60px; 
+        }
         &__icon {
             margin-right: 22px;
             margin-left: 30px;

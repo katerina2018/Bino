@@ -28,17 +28,18 @@
         content: '';
         width: 105%;
         height: 50%;
-        background:  $color-white;;
+        background:  $color-white;
         transform: rotate(-7deg);
     }
     .fillWidth{
+        position: absolute;
+        top: 0%;
+        left:50%;
+        transform: translateX(-50%);
         width: 100%;
     }
     &__content{
-        position: absolute;
-        top: 37px;
-        left:50%;
-        transform: translateX(-50%);
+       
     }
     &__bg{
         position: absolute;
@@ -66,6 +67,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 40px;
     
 }
 .menu{
@@ -92,7 +94,7 @@
     &__link{
         color: $color-title;
         text-decoration: none;
-        padding: 10px 4px;
+        padding: 10px 14px;
         position: relative;
        &:after{
            position: absolute;
@@ -170,7 +172,12 @@
 
 
 @media screen and (max-width: $small){
-  
+.container{
+    overflow: hidden;
+}
+.logo{
+    margin-left: 0px;
+}
  
 .menu{
     display: flex;
@@ -267,6 +274,25 @@
 
 .fillWidth{
     display: none;}
+}
+.heading{
+    margin-top: 50px;
+    h3{
+        font-size: 16px;
+    }
+    
+    h1{
+        font-size: 40px;
+    }
+    p{
+        padding: 0px;
+    }
+    &__btn{
+        flex-direction: column;
+        .btn{
+            margin: 10px;
+        }
+    }
 }
 
   
