@@ -79,6 +79,7 @@
     }
     &__box{
         position: relative; 
+        overflow: hidden;
         img{
             max-width: 100%;
             width: 100%;
@@ -87,20 +88,22 @@
         }
         &:hover .works__text{
             opacity: 0.8;
+            transform: translateY(100%); 
         }
 
     }
     &__text{
         background-color:$color-secondary; 
-        opacity: 0;
+        opacity: 0.2;
         width: 100%;
         height: 100%;
         position: absolute;
-        top:0px;
+        top:-100%;
         left:0px;
         text-align: left;
         padding-left: 50px;
-        transition: .3s;
+        transition: .5s;
+        
         h3{
             font-size: 24px;
             font-weight: 600;

@@ -157,6 +157,7 @@
     }
     &__btn{
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         margin-top: 23px;
         padding: 0px 32px;
@@ -169,7 +170,33 @@
     
 
 }
-
+@media screen and (max-width: $container-width-medium){
+    .container{
+        overflow: hidden;
+    }
+    .header{
+        min-height: 700px;
+        .heading{
+            margin-top: 50px;
+        h3{
+            font-size: 16px;
+        }
+        
+        h1{
+            font-size: 40px;
+        }
+        p{
+            padding: 0px;
+        }
+            &__btn{
+                flex-direction: row;
+            }
+        }
+    }
+    .fillWidth{
+        display: none;
+    }
+}
 
 @media screen and (max-width: $small){
 .container{
@@ -274,7 +301,8 @@
 
 .fillWidth{
     display: none;}
-}
+
+.header{
 .heading{
     margin-top: 50px;
     h3{
@@ -294,5 +322,5 @@
         }
     }
 }
-
+}}
   

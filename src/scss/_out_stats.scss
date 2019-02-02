@@ -61,7 +61,9 @@
     }
     
 }
-@media screen and (max-width: $small){
+@media screen and (max-width: $container-width-medium){
+
+
     .out_stats{
         &__content {
             min-height: 241px;

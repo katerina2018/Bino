@@ -31,6 +31,14 @@ img{
         
             
 }
+
+@media screen and (max-width: $container-width-medium){
+    .up__arrow{
+        left: 90%;
+        bottom: 90%;
+    }
+
+}
 @media screen and (max-width: $small){
     .up__arrow{
         left: 84%;

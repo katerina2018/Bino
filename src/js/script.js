@@ -1,12 +1,21 @@
-// alert(1);
 function burgerFunction(x) {
 
-x.nextElementSibling.classList.toggle("hidden");
+  x.nextElementSibling.classList.toggle("hidden");
 
-for (var i = 0; i < x.children.length; i++) {
-    // console.log(x.children[i].classList.toggle("change") );
+  x.nextElementSibling.onclick=function(){
+    x.nextElementSibling.classList.toggle("hidden"); 
+    for (var i = 0; i < x.children.length; i++) {
+      x.children[i].classList.toggle("change");
+      
+    }
+  }
+  for (var i = 0; i < x.children.length; i++) {
+    x.children[i].classList.toggle("change");
+    
+  }
+  
 }
-}
+
 /*slider history start*/
 var images = document.querySelectorAll('.js-slider img');
 var current = 0;
@@ -15,20 +24,12 @@ var times;
 function slider(){
   for(var i=0; i<images.length; i++){
     images[i].classList.add('opacity0');
-    
   }
   images[current].classList.remove('opacity0');
   clearTimeout(times);
-  
-  
 }
 slider();
 autoSlider();
-// document.querySelector('.js-slider').onclick = slider;
-
-
-// console.log(document.querySelector('.js-btn-play').childNodes[0].classList.add('opacity1'));
-// console.log(i.classList.add('opacity1');
 
 document.querySelector('.js-btn-play').onclick = autoSlider;
 function autoSlider(){
@@ -74,8 +75,6 @@ document.querySelector('.js-btn-right').onclick = function(){
   slider()
   
 }
-
-// console.log(images);
 /*slider history end*/
 
 
@@ -87,9 +86,6 @@ function theFunction(event){
   var item=event.target
   var link = document.querySelectorAll('.works__link')
   var target = event.target.innerHTML; // где был клик?
-  // console.log(item);
-
-  // console.log(item.classList.contains('works__link--active'));
   if(item.classList.contains('works__link--active')==false){
     for(var i=0; i< link.length; i++){
       link[i].classList.remove('works__link--active');
@@ -211,14 +207,11 @@ window.onscroll=function(){
     elemTeam.classList.add('st0')
     elemBgTeam.classList.add('st1')
   }
-  else if(positionTeam>-800 && positionTeam<-700 ){
+  else if(positionTeam>-800 && positionTeam<-700 || positionTeam>1100 ){
     elemTeam.classList.remove('st0')
     elemBgTeam.classList.remove('st1')
   }
-  else if(positionTeam>1100 ){
-    elemTeam.classList.remove('st0')
-    elemBgTeam.classList.remove('st1')
-  }
+
 
 /*animation team and onscroll  end*/
 
@@ -228,7 +221,7 @@ window.onscroll=function(){
   var position=elem.getBoundingClientRect().top;
 
 
-  if(position<200 && position>180 ){
+  if(position<200 && position>100 ){
     // console.log(scrolled + 'px');
     var time=2;
     var array=document.querySelectorAll('.out_stats__text h3');
